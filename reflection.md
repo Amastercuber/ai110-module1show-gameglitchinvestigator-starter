@@ -10,7 +10,8 @@ normal ig
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
   1. didnt let me guess after i pressed new game, it did reroll the mystery number though
-  2. when target was 81 and i guessed 50 it said lower
+  2. when target was 81 and i guessed 50 it said lower, i think it messed up higher vs lower
+  sometimes get negative target
 
 **Bug Reproduction Log**
 
