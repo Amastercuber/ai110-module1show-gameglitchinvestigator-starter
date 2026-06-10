@@ -5,8 +5,12 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
+normal ig
+
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
+  1. didnt let me guess after i pressed new game, it did reroll the mystery number though
+  2. when target was 81 and i guessed 50 it said lower
 
 **Bug Reproduction Log**
 
