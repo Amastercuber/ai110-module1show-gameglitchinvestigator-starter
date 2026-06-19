@@ -33,20 +33,31 @@ It wrote the code, ran away, and now the game is unplayable.
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. Run `python -m streamlit run app.py` and open the app. Select a difficulty from the sidebar — the range and attempt count update accordingly.
+2. Type a guess in the input box and either click "Submit Guess" or press Enter.
+3. The hint  tells you to go higher or lower based on your guess relative to the secret.
+4. Keep guessing .
+5. Win or lose, click "New Game" and the game immediately resets and lets you guess again .
 
-**Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
+
 
 ## 🧪 Test Results
 
 ```
-# Paste your pytest output here, e.g.:
-# pytest tests/
-# ========================= X passed in 0.XXs =========================
+$ python -m pytest tests/test_game_logic.py -v
+============================= test session starts =============================
+platform win32 -- Python 3.13.1, pytest-9.1.1, pluggy-1.6.0
+collecting ... collected 7 items
+
+tests/test_game_logic.py::test_winning_guess PASSED                      [ 14%]
+tests/test_game_logic.py::test_guess_too_high PASSED                     [ 28%]
+tests/test_game_logic.py::test_guess_too_low PASSED                      [ 42%]
+tests/test_game_logic.py::test_bug2_too_high_message_says_go_lower PASSED [ 57%]
+tests/test_game_logic.py::test_bug2_too_low_message_says_go_higher PASSED [ 71%]
+tests/test_game_logic.py::test_bug1_new_game_resets_status SKIPPED       [ 85%]
+tests/test_game_logic.py::test_bug5_enter_key_submits_guess SKIPPED      [100%]
+
+======================== 5 passed, 2 skipped in 0.03s =========================
 ```
 
 ## 🚀 Stretch Features
