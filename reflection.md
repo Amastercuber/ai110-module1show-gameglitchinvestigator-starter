@@ -11,17 +11,21 @@ normal ig
   (for example: "the hints were backwards").
   1. didnt let me guess after i pressed new game, it did reroll the mystery number though
   2. when target was 81 and i guessed 50 it said lower, i think it messed up higher vs lower
-  sometimes get negative target
+  3. sometimes get negative target
+  4. says 8 attempts allowed but only actually gave me 7
+  5. pressing enter on the keyboard to submit a guess did nothing
 
 **Bug Reproduction Log**
 
 Document at least 3 bugs you found. Add rows as needed.
 
-| Input | Expected Behavior | Actual Behavior | Console Output / Error |
-|-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
-| | | | |
+| Input Used | Expected Behavior | Actual Behavior | Console Error / Output |
+|------------|-------------------|-----------------|------------------------|
+| Won a game, clicked "New Game" | should start fresh and let me guess again | still showed "you already won", couldn't do anything | none |
+| secret was 81, guessed 50 | "Go HIGHER!" since my guess was too low | said "Go LOWER!" which is the opposite | none |
+| 2nd guess of 9, secret was 50 | "Too Low", go higher | said "Too High" even though 9 is way below 50 | none |
+| Normal difficulty, played a full game | should get 8 attempts as advertised | ran out after only 7 guesses | none — attempts counter started at 1 instead of 0, so one was already used before the first guess |
+| typed a guess and pressed Enter | guess should submit | nothing happened, had to click the button manually | none — no st.form() wrapper so Enter key isn't connected to the submit button |
 
 ---
 
